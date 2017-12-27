@@ -1,5 +1,3 @@
-explore: accidents {}
-
 view: accidents {
   sql_table_name: flightstats.accidents ;;
 

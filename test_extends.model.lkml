@@ -2,9 +2,10 @@ connection: "faa"
 
 include: "accidents.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project
+include: "aircraft.view.lkml"
 
+include: "jomg_test.model.lkml"
 
-include: "jomg_test.model"
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
 #
@@ -20,8 +21,9 @@ include: "jomg_test.model"
 #   }
 # }
 
-explore: accidents_2 {
-  label: "accidents"
-  extends: [accidents]
+explore: aircraft_2 {
+  view_name: aircraft
+  label: "aircraft 2"
+  extends: [aircraft]
   hidden: yes
   }

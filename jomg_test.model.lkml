@@ -7,6 +7,7 @@ include: "*.view"
 include: "*.dashboard"
 
 explore: aircraft {
+  hidden: yes
   join: aircraft_types {
     type: left_outer
     sql_on: ${aircraft.aircraft_type_id} = ${aircraft_types.aircraft_type_id} ;;
@@ -21,6 +22,7 @@ explore: aircraft {
 }
 
 explore: aircraft_engines {
+  hidden: yes
   join: aircraft_engine_types {
     type: left_outer
     sql_on: ${aircraft_engines.aircraft_engine_type_id} = ${aircraft_engine_types.aircraft_engine_type_id} ;;
@@ -29,6 +31,7 @@ explore: aircraft_engines {
 }
 
 explore: aircraft_models {
+  hidden: yes
   join: aircraft_types {
     type: left_outer
     sql_on: ${aircraft_models.aircraft_type_id} = ${aircraft_types.aircraft_type_id} ;;
@@ -42,4 +45,6 @@ explore: aircraft_models {
   }
 }
 
-explore: airports {}
+explore: accidents {hidden: yes}
+
+explore: airports {hidden: yes}
