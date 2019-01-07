@@ -4,7 +4,6 @@ connection: "faa"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
 
 explore: aircraft {
   hidden: yes

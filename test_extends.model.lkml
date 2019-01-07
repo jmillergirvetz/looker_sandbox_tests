@@ -1,7 +1,6 @@
-connection: "faa"
+#connection: "faa"
 
 include: "accidents.view.lkml"         # include all views in this project
-include: "*.dashboard.lookml"  # include all dashboards in this project
 include: "aircraft.view.lkml"
 
 include: "jomg_test.model.lkml"

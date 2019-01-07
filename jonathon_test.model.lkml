@@ -4,7 +4,9 @@ connection: "thelook"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+datagroup: fast {
+  sql_trigger: select current_date(); ;;
+}
 
 explore: events {
   hidden: yes
